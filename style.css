@@ -1,0 +1,179 @@
+/* Reset and body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the entire resume */
+.resume-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Sidebar navigation styling */
+.sidebar {
+    width: 200px;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #ff9800;
+}
+
+/* Main content area */
+.content-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Card styling for sections */
+.card {
+    background-color: #3e3e3e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+    color: #ff9800;
+}
+
+.content {
+    display: block;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 500px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+button.toggle-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.toggle-btn:hover {
+    background-color: #e68a00;
+}
+
+.hidden {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    /* Make sidebar and content area stack vertically */
+    .resume-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Adjust sidebar width */
+    .sidebar {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    /* Make content area take full width */
+    .content-area {
+        padding: 10px;
+        flex: none;
+    }
+
+    /* Adjust card spacing for smaller screens */
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust profile pic size */
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+
+    /* Reduce font size for smaller screens */
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .sidebar a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar a {
+        font-size: 0.9em;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.2em;
+    }
+
+    button.toggle-btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}

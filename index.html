@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#personal-info">Personal Info</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work-experience">Work Experience</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <!-- Personal Information -->
+            <section id="personal-info" class="card">
+                <img src="0dc9248b-7526-48ad-8671-bb0e49e6f464.jfif" alt="Profile Picture" class="profile-pic">
+                <div class="info">
+                    <h1>Noor Shaikh</h1>
+                    <p>Email: n76685248@gmail.com</p>
+                    <p>Phone: (03132272190)</p>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section id="education" class="card">
+                <h2>🎓 Education</h2>
+                <div class="content">
+                    <p>MaTriCulaTioN</p>
+                </div>
+                <button class="toggle-btn" data-target="education">Toggle Education</button>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills" class="card">
+                <h2>🛠️ Skills</h2>
+                <div class="content">
+                    <p>HTML / CSS / JAVASCRIPT</p>
+                    <p>UX/UI DESIGN</p>
+                    <p>TYPESCRIPT / C++</p>
+                    <p>PYTHON</p>
+                    <p>NEXT.JS / REACT / CLOUD COMPUTATIVE AI ENGINEERING</p>
+                </div>
+                <button class="toggle-btn" data-target="skills">Toggle Skills</button>
+            </section>
+
+            <!-- Work Experience -->
+            <section id="work-experience" class="card">
+                <h2>💼 Work Experience</h2>
+                <div class="content">
+                    <p>Full Stack Web Developer Having 1-2 Years Experience</p>
+                </div>
+                <button class="toggle-btn" data-target="work-experience">Toggle Work Experience</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
